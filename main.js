@@ -18,8 +18,8 @@ function playRound(humanChoice, computerChoice) {
   humanChoice =
     humanChoice[0].toUpperCase() + humanChoice.slice(1).toLowerCase();
 
-  console.log("Human chose: " + humanChoice);
-  console.log("Computer chose: " + computerChoice);
+  //   console.log("Human chose: " + humanChoice);
+  //   console.log("Computer chose: " + computerChoice);
 
   if (humanChoice === computerChoice) {
     console.log(`Tie!! Both chose ${humanChoice}`);
@@ -48,12 +48,18 @@ function playRound(humanChoice, computerChoice) {
       computerScore++;
     }
   }
-
-  console.log(`Human Score: ${humanScore}`);
-  console.log(`Computer Score: ${computerScore}`);
 }
 
-compCh = getComputerChoice();
-humanCh = getHumanChoice();
+function playGame() {
+  for (let i = 0; i < 5; i++) {
+    playRound(getHumanChoice(), getComputerChoice());
+  }
+  console.log(`Human Score: ${humanScore}`);
+  console.log(`Computer Score: ${computerScore}`);
 
-playRound(humanCh, compCh);
+  if (humanScore === computerScore) console.log("A Draw!");
+  else if (humanScore < computerScore) console.log("You Lost!!");
+  else console.log("YOU WON!!!!");
+}
+
+playGame();
