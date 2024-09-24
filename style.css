@@ -1,0 +1,36 @@
+* {
+  text-align: center;
+  font-size: 32px;
+}
+body {
+  background-color: antiquewhite;
+  border: 5px solid black;
+  border-radius: 20px;
+  max-width: 60vw;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.all-btn {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+button {
+  padding: 24px 80px;
+  font-size: 80px;
+  background-color: beige;
+  border: 5px solid gray;
+  border-radius: 15px;
+}
+
+.results {
+  display: flex;
+  border-top: 4px solid black;
+
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
